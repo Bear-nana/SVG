@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Graphics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
+              
+
+
+  </head>
+
+	
+	<body style="background-color:black;font-family: 'Montserrat', sans-serif;">
+
+        <div class="container" style="background-image:url(img/b6.jpeg);">
+          <div class="wow bounceInDown">
+            <div class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1s">
+            <svg viewBox="40 -100 1200 700">
+                
+                <circle cx="650" cy="300" r="220" style="fill:url(#grad);position:relative;" />
+
+                <defs>
+                  <radialGradient id="grad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                      <stop offset="20%" style="stop-color:rgb(255, 102, 255);
+                      stop-opacity:0.6" />
+                      <stop offset="80%" style="stop-color:rgb(0, 102, 255);" />
+                    </radialGradient>
+
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                      <stop offset="10%" style="stop-color:rgb(0, 102, 255);
+                      stop-opacity:1" />
+                      <stop offset="90%" style="stop-color:rgb(255, 102, 255);" />
+                    </radialGradient>
+                </defs>
+                <circle id="demo1" cx="450" cy="300" r="150" style="fill:url(#grad1);position:relative;" />
+                <text id="social" x="400" y="300" style="font-size:25px;fill:white;">BEARNA</text>
+
+                <circle id="demo" cx="850" cy="300" r="150" style="fill:url(#grad1);position:relative;" />
+                <text id="trade" x="800" y="300" style="font-size:25px;fill:white">TINEXUC</text>
+
+            </svg>
+
+
+            <script>
+                new WOW().init();
+              </script>   
+
+                <script>
+                   $(document).ready(function(){
+                    $("#demo,#demo1").mouseover(function(){
+                      $(this).animate({opacity: '0.4'}, 'slow');
+
+                       });
+                      $("#demo,#demo1").mouseout(function(){
+                        $(this).animate({opacity: '1'});
+                      });
+                      $("#social").click(function(){
+                        window.location.href='http://www.google.com';
+                      });
+                      $("#trade").click(function(){
+                        window.location.href='http://www.google.com';
+                      });
+
+                    });
+                
+                </script>
+             </div>       
+          </div>  
+        </div>
+
+
+    </body>
+</html>
+
